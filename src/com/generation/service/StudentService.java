@@ -12,7 +12,22 @@ public class StudentService
 
     public void subscribeStudent( Student student )
     {
+<<<<<<< HEAD
         students.put( student.getId(), student );
+=======
+        // check for existing ID and email
+        for (Student existingStudent : students.values()) {
+            if (existingStudent.getEmail().equals(student.getEmail())) {
+                System.out.println("This email is already registered to a student.");
+                return;
+            } else if (existingStudent.getId().equals(student.getId())) {
+                System.out.println("This ID is already registered to a student.");
+                return;
+            }
+        }
+        students.put( student.getId(), student );
+        System.out.println("Student Successfully Registered! ");
+>>>>>>> marykohn
     }
 
     public Student findStudent( String studentId )
@@ -27,6 +42,16 @@ public class StudentService
     public void showSummary()
     {
         //TODO implement
+<<<<<<< HEAD
+=======
+        System.out.println( "All Students:" );
+        for ( String key : students.keySet() )
+        {
+            Student student = students.get( key );
+            System.out.println( student );
+        }
+
+>>>>>>> marykohn
     }
 
     public void enrollToCourse( String studentId, Course course )
@@ -36,6 +61,10 @@ public class StudentService
             students.get( studentId ).enrollToCourse( course );
         }
     }
+<<<<<<< HEAD
 
 
 }
+=======
+}
+>>>>>>> marykohn

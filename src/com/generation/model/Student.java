@@ -24,6 +24,13 @@ public class Student
     public void enrollToCourse( Course course )
     {
         //TODO implement this method
+<<<<<<< HEAD
+=======
+        if(!courses.contains(course)){
+            courses.add(course);
+        }
+        System.out.println("Student is already enrolled in: " + course.getCode());
+>>>>>>> marykohn
     }
 
     public void registerApprovedCourse( Course course )
@@ -31,10 +38,21 @@ public class Student
         approvedCourses.put( course.getCode(), course );
     }
 
+<<<<<<< HEAD
 
     public boolean isAttendingCourse( String courseCode )
     {
         //TODO implement this method
+=======
+    public boolean isAttendingCourse( String courseCode )
+    {
+        //TODO implement this method
+        for(Course course : courses) {
+            if (course.getCode().equals(courseCode)) {
+                return true;
+            }
+        }
+>>>>>>> marykohn
         return false;
     }
 

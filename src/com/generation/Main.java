@@ -6,18 +6,37 @@ import com.generation.service.CourseService;
 import com.generation.service.StudentService;
 import com.generation.utils.PrinterHelper;
 
+<<<<<<< HEAD
 import java.text.ParseException;
+=======
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+>>>>>>> marykohn
 import java.util.Scanner;
 
 public class Main
 {
 
+<<<<<<< HEAD
     public static void main( String[] args )
+=======
+    public static void main(String[] args )
+>>>>>>> marykohn
         throws ParseException
     {
         StudentService studentService = new StudentService();
         CourseService courseService = new CourseService();
         Scanner scanner = new Scanner( System.in );
+<<<<<<< HEAD
+=======
+
+        // Part 3: Create new students, enroll the students, show summary
+        DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
+        Student student = new Student("0626", "Mary Kohn", "marymkohn@gmail.com", formatter.parse("06/26/1993"));
+        studentService.subscribeStudent(student);
+
+>>>>>>> marykohn
         int option = 0;
         do
         {
@@ -104,4 +123,8 @@ public class Main
         Student student = PrinterHelper.createStudentMenu( scanner );
         studentService.subscribeStudent( student );
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> marykohn
 }
